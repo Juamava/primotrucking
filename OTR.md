@@ -1,4 +1,4 @@
-# 📦🚚 Over the road
+# 🚚 Over the road
 
 OTR (Over the Road) refers to freight transportation by road, and it is classified into two main categories:
 - **FTL (Full Truckload)**: Full load in a single truck.
