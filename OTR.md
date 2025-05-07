@@ -1,6 +1,6 @@
 # 🚚 Over the road
 
-Over the Road refers to freight transportation by road, and it is classified into two main categories:
+**Over the Road** refers to freight transportation by road, and it is classified into two main categories:
 - **FTL (Full Truckload)**: Full load in a single truck.
 - **LTL (Less than Truckload)**: Partial load, where the truck transports goods from different customers.
 
