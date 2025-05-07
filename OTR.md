@@ -1,30 +1,31 @@
+
 # OTR API Documentation 📦🚚
 
-## Contexto a nivel de negocio: ¿Qué es OTR? 🌎
+## Business Context: What is OTR? 🌎
 
-OTR (Over the Road) se refiere al transporte de carga por carretera, y se clasifica en dos categorías principales:
-- **FTL (Full Truckload)**: Carga completa en un solo camión.
-- **LTL (Less than Truckload)**: Carga parcial, donde el camión transporta mercancías de diferentes clientes.
+OTR (Over the Road) refers to freight transportation by road, and it is classified into two main categories:
+- **FTL (Full Truckload)**: Full load in a single truck.
+- **LTL (Less than Truckload)**: Partial load, where the truck transports goods from different customers.
 
-Nuestro servicio de OTR permite obtener tarifas y realizar bookings para ambos modos de transporte.
+Our OTR service allows you to get rates and make bookings for both transportation modes.
 
 ---
 
-## Obtención de tarifas 📊
+## Getting Rates 📊
 
-Para obtener las tarifas para un trayecto OTR, puedes hacer uso del siguiente endpoint:
+To obtain rates for an OTR route, you can use the following endpoint:
 
-### Ruta: `{{lfs-connect-api}}/v1/otr/quote`
+### Route: `{{lfs-connect-api}}/v1/otr/quote`
 
-### ¿Cómo funciona la obtención de tarifas?
+### How does rate retrieval work?
 
-El endpoint recibe una solicitud que incluye información detallada sobre el origen, destino, y los artículos a transportar. A partir de esta información, se calcula el costo total del transporte para diferentes transportistas y modos de servicio.
+The endpoint receives a request that includes detailed information about the origin, destination, and items to be transported. Based on this information, the total transportation cost is calculated for different carriers and service modes.
 
-### Endpoint para obtener tarifas
+### Endpoint for getting rates
 
 `POST {{lfs-connect-api}}/v1/otr/quote`
 
-### Request: La solicitud a la API
+### Request: The API request
 
 ```json
 {
@@ -79,7 +80,7 @@ El endpoint recibe una solicitud que incluye información detallada sobre el ori
 }
 ```
 
-### Response: La respuesta de la API
+### Response: The API response
 
 ```json
 {
@@ -129,11 +130,11 @@ mso-bidi-language:AR-SA">TSA CARRIER</span>"
 
 ---
 
-## Creación de un embarque 🚢
+## Creating a Shipment 🚢
 
-Para la creación de un embarque, debes enviar la solicitud con la información relevante sobre el cliente, el origen, el destino, los artículos, y las tarifas seleccionadas.
+To create a shipment, you need to send a request with relevant information about the customer, origin, destination, items, and selected rates.
 
-### Endpoint para crear un embarque
+### Endpoint for creating a shipment
 
 `POST {{lfs-connect-api}}/v1/otr/shipment`
 
@@ -188,14 +189,14 @@ Para la creación de un embarque, debes enviar la solicitud con la información 
 
 ## Metadata 🛠️
 
-La metadata en la API de OTR incluye claves necesarias para trabajar con el sistema, tales como:
+Metadata in the OTR API includes the keys necessary to work with the system, such as:
 
-- **equipments**: Tipos de equipo disponibles para el transporte.
-- **accessorials**: Servicios adicionales, como la manipulación o el seguro.
-- **service**: El nivel de servicio de transporte, como "Standard", "Expedited", etc.
+- **equipments**: Available types of equipment for transportation.
+- **accessorials**: Additional services like handling or insurance.
+- **service**: The service level for transportation, such as "Standard", "Expedited", etc.
 
-Estas claves permiten personalizar las solicitudes según las necesidades del cliente y los requerimientos de transporte.
+These keys allow customization of requests according to customer needs and transportation requirements.
 
 ---
 
-Gracias por usar nuestra API! 🚚
+Thank you for using our API! 🚚
