@@ -20,7 +20,12 @@ The endpoint receives a request that includes detailed information about the ori
 
 ### Endpoint for getting rates
 
-`POST {{lfs-connect-api}}/v1/otr/quote`
+**POST** `/v1/otr/quote`
+
+You can use the following base URLs depending on the environment:
+
+- 🧪 **Sandbox**: `https://connect.primofabric.com`
+- 🚀 **Production**: `https://connect.heyprimo.com`
 
 ### Request: The API request
 
