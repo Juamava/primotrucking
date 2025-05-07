@@ -1,8 +1,6 @@
 
 # OTR API Documentation 📦🚚
 
-## Business Context: What is OTR? 🌎
-
 OTR (Over the Road) refers to freight transportation by road, and it is classified into two main categories:
 - **FTL (Full Truckload)**: Full load in a single truck.
 - **LTL (Less than Truckload)**: Partial load, where the truck transports goods from different customers.
@@ -127,64 +125,6 @@ mso-bidi-language:AR-SA">TSA CARRIER</span>"
     "errors": null
 }
 ```
-
----
-
-## Creating a Shipment 🚢
-
-To create a shipment, you need to send a request with relevant information about the customer, origin, destination, items, and selected rates.
-
-### Endpoint for creating a shipment
-
-`POST {{lfs-connect-api}}/v1/otr/shipment`
-
-### Request
-
-```json
-{
-    "customerReference": 1237100106,
-    "shipmentDetails": {
-        "origin": {
-            "name": "Warehouse A",
-            "address1": "123 Main Street",
-            "city": "Los Angeles",
-            "state": "CA",
-            "postalCode": "90001",
-            "country": "US"
-        },
-        "destination": {
-            "name": "Customer B",
-            "address1": "456 Market Street",
-            "city": "San Francisco",
-            "state": "CA",
-            "postalCode": "94103",
-            "country": "US"
-        },
-        "items": [
-            {
-                "itemName": "Pallet of Electronics",
-                "quantity": 2,
-                "weight": 30
-            }
-        ],
-        "service": "Standard"
-    }
-}
-```
-
-### Response
-
-```json
-{
-    "data": {
-        "shipmentNumber": "SH123456",
-        "status": "Created",
-        "trackingUrl": "https://tracking.url/SH123456"
-    },
-    "errors": null
-}
-```
-
 ---
 
 ## Metadata 🛠️
@@ -196,7 +136,3 @@ Metadata in the OTR API includes the keys necessary to work with the system, suc
 - **service**: The service level for transportation, such as "Standard", "Expedited", etc.
 
 These keys allow customization of requests according to customer needs and transportation requirements.
-
----
-
-Thank you for using our API! 🚚
