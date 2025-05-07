@@ -10,22 +10,12 @@ Our OTR service allows you to get rates and make bookings for both transportatio
 
 ## Getting Rates 📊
 
-To obtain rates for an OTR route, you can use the following endpoint:
+To obtain transportation rates, you must send a `POST` request to the `/v1/otr/quote` endpoint. This endpoint is available in both our sandbox and production environments:
 
-### Route: `{{lfs-connect-api}}/v1/otr/quote`
+- 🧪 **Sandbox**: `https://connect.primofabric.com/v1/otr/quote`
+- 🚀 **Production**: `https://connect.heyprimo.com/v1/otr/quote`
 
-### How does rate retrieval work?
-
-The endpoint receives a request that includes detailed information about the origin, destination, and items to be transported. Based on this information, the total transportation cost is calculated for different carriers and service modes.
-
-### Endpoint for getting rates
-
-**POST** `/v1/otr/quote`
-
-You can use the following base URLs depending on the environment:
-
-- 🧪 **Sandbox**: `https://connect.primofabric.com`
-- 🚀 **Production**: `https://connect.heyprimo.com`
+The request should include detailed information about the origin, destination, and items to be transported. Based on this data, our system returns quotes from different carriers and service modes, including FTL and LTL.
 
 ### Request: The API request
 
