@@ -97,5 +97,5 @@ GET /v1/drayage/markets
 You must also specify the container type. Valid container types can be retrieved using the following endpoint:
 
 ```
-GET /v1/drayage/container-types
+GET /v1/drayage/equipments
 ```
