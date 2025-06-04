@@ -82,6 +82,146 @@ When sending a request to the drayage quote endpoint, include the following JSON
 
 ---
 
+### Response: The API response
+
+```json
+{
+    "data": {
+        "quoteNumber": 8904305,
+        "rates": [
+            {
+                "rateNumber": "1",
+                "prenotice": "3-5 days",
+                "freight": 935.907284870394320,
+                "fuel": 0.00,
+                "accessorials": [
+                    {
+                        "name": "Reefer",
+                        "cost": 200,
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Hazardous",
+                        "cost": 200,
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Chassis",
+                        "cost": 50,
+                        "quantity": 2
+                    },
+                    {
+                        "name": "ChassisSplit",
+                        "cost": 90,
+                        "quantity": 1
+                    }
+                ],
+                "expectedAccessorialsCosts": 590,
+                "expectedTotal": 1525.907284870394320
+            },
+            {
+                "rateNumber": "2",
+                "prenotice": "2-3 days",
+                "freight": 969.940277047499568,
+                "fuel": 0.00,
+                "accessorials": [
+                    {
+                        "name": "Reefer",
+                        "cost": 200,
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Hazardous",
+                        "cost": 200,
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Chassis",
+                        "cost": 50,
+                        "quantity": 2
+                    },
+                    {
+                        "name": "ChassisSplit",
+                        "cost": 90,
+                        "quantity": 1
+                    }
+                ],
+                "expectedAccessorialsCosts": 590,
+                "expectedTotal": 1559.940277047499568
+            }
+        ],
+        "disclaimers": [
+            {
+                "drayageMarketZipCode": "Rate per Container",
+                "disclaimer": "15148"
+            },
+            {
+                "drayageMarketZipCode": "Subject to Equipment Availability",
+                "disclaimer": "15148"
+            },
+            {
+                "drayageMarketZipCode": "NS is grounded Ramp",
+                "disclaimer": "15148"
+            }
+        ],
+        "remarks": [
+            {
+                "drayageMarketZipCode": "15148",
+                "accessorialNumber": 595,
+                "remark": "OW Permit for Excessive Weight: $75 per state"
+            },
+            {
+                "drayageMarketZipCode": "15148",
+                "accessorialNumber": 740,
+                "remark": "LayOver Fee (May apply and varies due to Distance, HOS, Delays, etc): $300 - $500 (depends on the distance)"
+            },
+            {
+                "drayageMarketZipCode": "15148",
+                "accessorialNumber": 735,
+                "remark": "Drop&Pick: Double the Rate"
+            },
+            {
+                "drayageMarketZipCode": "15148",
+                "accessorialNumber": 630,
+                "remark": "Storage: $45 per day"
+            },
+            {
+                "drayageMarketZipCode": "15148",
+                "accessorialNumber": 720,
+                "remark": "Chassis Split (maximum 2): $90/each"
+            },
+            {
+                "drayageMarketZipCode": "15148",
+                "accessorialNumber": 545,
+                "remark": "Driver Detention: $100/Additional Hour. 1 Free Hour for Loading/Unloading/Terminal Transaction"
+            },
+            {
+                "drayageMarketZipCode": "15148",
+                "accessorialNumber": 710,
+                "remark": "Chassis Flip (if required): $110"
+            },
+            {
+                "drayageMarketZipCode": "15148",
+                "accessorialNumber": 715,
+                "remark": "Pre Pull (if needed): $150"
+            }
+        ],
+        "notes": [
+            {
+                "drayageMarketZipCode": "15148",
+                "note": "Pool Chassis Shortage"
+            },
+            {
+                "drayageMarketZipCode": "15148",
+                "note": "We have Private Chassis Available"
+            }
+        ]
+    },
+    "errors": null
+}
+```
+---
+
 ## ⚓ Ports and Ramps
 
 To specify the **Port/Ramp** for the drayage service, you must provide a `market`. To obtain a list of available markets, use the following endpoint:
